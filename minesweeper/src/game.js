@@ -7,6 +7,7 @@
 // game.playMove(0, 1);
 // game.playMove(1, 2);
 // When done run `.exit`
+// Adding a comment here to test git stuff
 
 import {Board} from './board';
 
