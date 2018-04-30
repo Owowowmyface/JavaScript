@@ -1,0 +1,38 @@
+.App {
+  font-family: 'Work Sans', sans-serif;
+  background-color: #444649;
+  margin: 0;
+}
+
+h1 {
+  padding: .66rem 0;
+  text-align: center;
+  background-color: #1DA1F2;
+  font-family: Poppins, sans-serif;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
