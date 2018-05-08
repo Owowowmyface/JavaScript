@@ -13,7 +13,6 @@ export class SearchBar extends React.Component {
 
   //event handler for the input box. Takes an event object, and sets our searchTerm state variable accordingly.
   handleTermChange(e) {
-    console.log(this.state.searchTerm);
     this.setState({searchTerm: e.target.value});
   }
 
