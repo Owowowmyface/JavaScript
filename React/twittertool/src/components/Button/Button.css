@@ -1,0 +1,36 @@
+@font-face {
+  font-family: helvetica-neue-body;
+  src: url('../../fonts/HelveticaNeueLTStd-Lt.otf')
+}
+
+.button-off {
+  background: #ccc;
+  border: 1px solid #888;
+  color: #666;
+  padding: 6.5px 10px;
+  font-family: helvetica-neue-body;
+  color: black;
+  display: inline-block;
+  user-select: none;
+  border-radius: 10px;
+}
+
+.button-on {
+  background: #1DA1F2;
+  border: 1px solid #888;
+  color: white;
+  padding: 6.5px 10px;
+  font-family: helvetica-neue-body;
+  color: white;
+  display: inline-block;
+  user-select: none;
+  border-radius: 10px;
+}
+
+.button-off:hover {
+  background-color: #ddd
+}
+
+.button-on:hover {
+  background-color: #4db3f2
+}
