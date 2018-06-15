@@ -11,31 +11,39 @@
 body {
   height: 100%;
   background-color: #ddd;
-}
-
-.tweetDisplay {
-  padding: 20px;
-  border: 1px black solid;
-  margin: 10px auto;
-  width: 500px;
-  background-color: white;
-  font-family: helvetica-neue-body;
-  line-height: 1.4em;
-}
-
-.Banner {
-  background-color: #1DA1F2;
-  background-size: cover;
+  background-image: url('./twitterbird.png');
   background-repeat: no-repeat;
-  height: 7rem;
-  background-position: center;
+  background-position: 50% 180%;
+  background-size: 20rem 20rem;
+}
+
+.FormArea {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tweetDisplayContainer {
+  font-family: helvetica-neue-body;
+  line-height: 1.4rem;
+  background-color: white;
+  padding: 1rem 10px;
+  min-width: 350px;
+  width: 85%;
+  margin: 10px auto;
+  border: 2px #888 solid;
+}
+
+.tweetDisplayContainer p {
+  padding: 0 1rem;
 }
 
 .Banner h1 {
+  background-color: #1DA1F2;
+  min-width: 350px;
   text-align: center;
   padding: 2rem;
   font-family: helvetica-neue-heading;
   font-weight: bold;
   color: white;
-  font-size: 50px;
+  font-size: 3rem;
 }

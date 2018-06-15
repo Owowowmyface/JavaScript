@@ -1,0 +1,27 @@
+{
+  "outageTypes": ["outage", "maintenance"],
+  "issueTypes": [
+    {
+      "name":" ",
+      "label": "non-specific"
+    },
+    {
+      "name":"login",
+      "label":"login"
+      }
+    ],
+  "products": {
+    "Product1": {
+      "name": "Product1",
+      "hashtag": "@Product1"
+    },
+    "Product2":{
+      "name": "Product2",
+      "hashtag": "@Product2"
+    },
+    "Product3":{
+      "name": "Product3",
+      "hashtag": "@Product3"
+    }
+  }
+}

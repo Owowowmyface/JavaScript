@@ -8,88 +8,47 @@
   src: url('../../fonts/HelveticaNeueLTStd-Lt.otf')
 }
 
-.buttonContainer {
-  display: flex;
-  margin: 15px 10px;
-}
 
-.button-off {
-  margin: 0 7px;
-}
-
-.button-on {
-  margin: 0 7px;
-}
 
 .typeSelect {
   display: flex;
-  margin: 15px 10px;
+  margin: 1rem .6rem;
 }
 
 .typeSelect div {
-  margin: 0px 7px;
+  margin: 0 .5rem;
+  user-select: none;
 }
 
-.singleSelect {
+.formContainer {
   background-color: white;
   padding: 5px 10px 30px 10px;
-  width: 520px;
+  min-width: 350px;
+  width: 85%;
   margin: 10px auto;
-  border: 1px black solid;
+  border: 2px #888 solid;
 }
 
-.singleSelect h1, h2 {
-  padding-bottom: 2px;
-  width: 500px;
+.formContainer h1, h2 {
+  padding: .5rem 0;
 }
 
-.singleSelect h1 {
-  font-size: 2em;
+.formContainer h1 {
+  font-size: 2rem;
   color: #1DA1F2;
-  margin: 20px 15px;
+  margin: 1rem auto;
   font-family: helvetica-neue-heading;
   text-align: center;
 }
 
-.singleSelect h2 {
-  margin-bottom: 20px;
-  margin-left: 15px;
-  margin-top: 30px;
+.formContainer h2 {
+  border-bottom: 2px solid #ddd;
+  margin: 1.5rem 1.125rem;
   color: dark-gray;
   font-family: helvetica-neue-heading;
 }
 
-#multi-select {
-  margin-bottom: 0px;
-}
-
-.singleSelect input {
-  display: none;
-}
-
-.singleSelect label {
-  background: #ccc;
-  border: 1px solid #888;
-  color: #666;
-  padding: 5px 10px;
-  font-family: helvetica-neue-body;
-  color: black;
-  border-radius: 10px;
-}
-
-.singleSelect label:hover {
-  background-color: #ddd
-}
-
-.singleSelect label:active,
-.singleSelect label:focus {
-  background: #1DA1F2;
-}
-
-.singleSelect input:checked + label {
-  background: #1DA1F2;
-  color: white;
-}
+/* Submit Button Options */
 
 .submit-button-container {
   margion: 0 auto;
@@ -102,7 +61,7 @@
   font-family: helvetica-neue-heading;
   font-weight: bold;
   color: white;
-  border: 1pt black solid;
+  border: 1.5pt #888 solid;
   border-radius: 10px;
   width: 90px;
   text-align: center;
@@ -115,4 +74,53 @@
 
 .submit-button:active {
   background: #87d1ff;
+}
+
+
+/* Multi-Select button options*/
+
+#multi-select {
+  margin-bottom: 0;
+}
+
+.multiSelectContainer {
+  display: flex;
+  margin: 1rem .6rem;
+}
+
+.button-off {
+  margin: 0 7px;
+}
+
+.button-on {
+  margin: 0 7px;
+}
+
+
+/* Form container button elements */
+.formContainer input {
+  display: none;
+}
+
+.formContainer label {
+  background: #ddd;
+  border: 1.5px solid #888;
+  padding: 5px 10px;
+  font-family: helvetica-neue-body;
+  color: #545454;
+  border-radius: 10px;
+}
+
+.formContainer label:hover {
+  background-color: #ccc
+}
+
+.formContainer label:active,
+.formContainer label:focus {
+  background: #1DA1F2;
+}
+
+.formContainer input:checked + label {
+  background: #1DA1F2;
+  color: white;
 }

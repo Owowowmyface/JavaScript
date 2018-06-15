@@ -4,12 +4,11 @@
 }
 
 .button-off {
-  background: #ccc;
+  background: #ddd;
   border: 1px solid #888;
-  color: #666;
+  color: #545454;
   padding: 6.5px 10px;
   font-family: helvetica-neue-body;
-  color: black;
   display: inline-block;
   user-select: none;
   border-radius: 10px;
@@ -17,7 +16,7 @@
 
 .button-on {
   background: #1DA1F2;
-  border: 1px solid #888;
+  border: 1.5px solid #888;
   color: white;
   padding: 6.5px 10px;
   font-family: helvetica-neue-body;
@@ -28,7 +27,7 @@
 }
 
 .button-off:hover {
-  background-color: #ddd
+  background-color: #ccc
 }
 
 .button-on:hover {

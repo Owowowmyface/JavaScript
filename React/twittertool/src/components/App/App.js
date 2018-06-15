@@ -1,7 +1,5 @@
 import React from 'react';
-import logo from '../../logo.svg';
 import Form from '../Form/Form';
-import TwitterBird from './twitterbird.png'
 import './App.css';
 
 //App is the main stateful component. It generates all of the displayed HTML
@@ -21,6 +19,7 @@ class App extends React.Component {
     this.handleIssueType = this.handleIssueType.bind(this);
     this.changeSelectedProduct = this.changeSelectedProduct.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.config = require('../../conf/config.json')
   }
 
 //Sets the outageType state, which is selected in the Form component
@@ -44,16 +43,16 @@ class App extends React.Component {
     else {
       //setting up some grammar for the affected products. Oxford comma ftw!
       let productList = '';
-      if (this.state.selectedProducts.length === 1) {
-        productList = this.state.selectedProducts[0];
+      let productListHashtags = this.state.selectedProducts.map(product => this.config.products[product].hashtag)
+      if (productListHashtags.length === 1) {
+        productList = productListHashtags[0];
       }
       else if (this.state.selectedProducts.length === 2) {
-        productList = `${this.state.selectedProducts[0]} and ${this.state.selectedProducts[1]}`
+        productList = `${productListHashtags[0]} and ${productListHashtags[1]}`
       }
       else {
-        productList = this.state.selectedProducts.slice(0, this.state.selectedProducts.length - 1).join(', ') + `, and ${this.state.selectedProducts[this.state.selectedProducts.length - 1]}`
+        productList = productListHashtags.slice(0, productListHashtags.length - 1).join(', ') + `, and ${productListHashtags[productListHashtags.length - 1]}`
       }
-
 
       if (this.state.outageType === 'outage') {
         tweet = `We're currently investigating ${this.state.issueType} issues with ${productList}. Thank you for your patience as we investigate.`
@@ -90,15 +89,19 @@ class App extends React.Component {
         <div className="Banner">
           <h1>NOC Twitter Tool</h1>
         </div>
-        <Form issueType={this.state.issueType}
-              outageType={this.state.outageType}
-              handleIssueType={this.handleIssueType}
-              handleOutageType={this.handleOutageType}
-              handleProductSelect={this.changeSelectedProduct}
-              handleSubmit={this.handleSubmit}
-        />
-        <div className="tweetDisplay">
-          {this.state.tweetBody}
+        <div className="FormArea">
+          <Form config={this.config}
+                outageTypes={this.config.outageTypes}
+                issueType={this.state.issueType}
+                outageType={this.state.outageType}
+                handleIssueType={this.handleIssueType}
+                handleOutageType={this.handleOutageType}
+                handleProductSelect={this.changeSelectedProduct}
+                handleSubmit={this.handleSubmit}
+          />
+        <div className="tweetDisplayContainer">
+          <p>{this.state.tweetBody}</p>
+        </div>
         </div>
       </div>
     );
